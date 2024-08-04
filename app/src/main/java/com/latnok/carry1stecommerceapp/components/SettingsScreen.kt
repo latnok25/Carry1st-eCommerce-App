@@ -10,7 +10,6 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun SettingsScreen() {
-    // Your Settings screen content
     Column(modifier = Modifier.padding(16.dp)) {
         Text("Settings", style = MaterialTheme.typography.headlineMedium)
         // Add more settings options here

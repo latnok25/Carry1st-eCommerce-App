@@ -15,36 +15,6 @@ class CartViewModel @Inject constructor(
     private val cartItemUseCase: CartItemUseCase
 ) : ViewModel() {
 
-//    private val _cartItems = MutableStateFlow<List<CartItem>>(emptyList())
-//    val cartItems: StateFlow<List<CartItem>> get() = _cartItems
-//
-//    val cartItemCount: StateFlow<Int> = cartItems.map { it.size }.stateIn(
-//        scope = viewModelScope,
-//        started = SharingStarted.WhileSubscribed(5000),
-//        initialValue = 0
-//    )
-//
-//    init {
-//        viewModelScope.launch {
-//            _cartItems.value = cartDao.getAllCartItems()
-//        }
-//    }
-//
-//    fun addToCart(cartItem: CartItem) {
-//        viewModelScope.launch {
-//            cartDao.insertCartItem(cartItem)
-//            _cartItems.value = cartDao.getAllCartItems()
-//        }
-//    }
-//
-//    fun removeFromCart(cartItem: CartItem) {
-//        viewModelScope.launch {
-//            cartDao.deleteCartItem(cartItem)
-//            _cartItems.value = cartDao.getAllCartItems()
-//        }
-//    }
-
-
     private val _cartItems = MutableStateFlow<List<CartItem>>(emptyList())
     val cartItems: StateFlow<List<CartItem>> get() = _cartItems
 
@@ -67,21 +37,21 @@ class CartViewModel @Inject constructor(
     fun addToCart(cartItem: CartItem) {
         viewModelScope.launch {
             cartItemUseCase.AddtoCart(cartItem)
-            fetchAllCartItems() // Refresh the cart items
+            fetchAllCartItems()
         }
     }
 
     fun removeFromCart(uid: Int) {
         viewModelScope.launch {
             cartItemUseCase.RemoveFromCart(uid)
-            fetchAllCartItems() // Refresh the cart items
+            fetchAllCartItems()
         }
     }
 
     fun clearCart() {
         viewModelScope.launch {
             cartItemUseCase.ClearCart()
-            fetchAllCartItems() // Refresh the cart items
+            fetchAllCartItems()
         }
     }
 }

@@ -113,7 +113,7 @@ fun BottomNavigationBar(navController: NavHostController) {
             // Store Button
             IconButton(
                 onClick = { navController.navigate("store") },
-                modifier = Modifier.size(48.dp) // Increase icon size
+                modifier = Modifier.size(48.dp)
             ) {
                 Icon(Icons.Filled.Home, contentDescription = "Store", modifier = Modifier.size(32.dp))
             }
@@ -124,7 +124,7 @@ fun BottomNavigationBar(navController: NavHostController) {
             // Cart Button
             IconButton(
                 onClick = { navController.navigate("cart") },
-                modifier = Modifier.size(48.dp) // Increase icon size
+                modifier = Modifier.size(48.dp)
             ) {
                 BadgedBox(badge = { if (cartItemCount > 0) Badge { Text(cartItemCount.toString()) } },  modifier = Modifier.size(32.dp)) {
                     Icon(Icons.Filled.ShoppingCart, contentDescription = "Cart", modifier = Modifier.size(32.dp))
@@ -137,7 +137,7 @@ fun BottomNavigationBar(navController: NavHostController) {
             // Settings Button
             IconButton(
                 onClick = { navController.navigate("settings") },
-                modifier = Modifier.size(48.dp) // Increase icon size
+                modifier = Modifier.size(48.dp)
             ) {
                 Icon(Icons.Filled.Settings, contentDescription = "Settings", modifier = Modifier.size(32.dp))
             }

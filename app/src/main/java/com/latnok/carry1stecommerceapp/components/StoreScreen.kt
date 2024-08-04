@@ -37,7 +37,7 @@ fun StoreScreen(viewModel: ProductViewModel, navController: NavHostController) {
     val products by viewModel.products.collectAsState()
 
     LazyVerticalGrid(
-        columns = GridCells.Fixed(2), // Two columns
+        columns = GridCells.Fixed(2),
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(8.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),

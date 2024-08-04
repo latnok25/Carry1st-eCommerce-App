@@ -17,8 +17,6 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.latnok.data.repository.ProductRepositoryImpl
 import com.latnok.domain.repository.ProductRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
 
 @Module
 @InstallIn(SingletonComponent::class)
