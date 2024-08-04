@@ -25,7 +25,6 @@ Retrofit: For network operations to fetch product data from the server.
 Room: Provides local data storage for cart items.
 Hilt: Used for dependency injection to manage the lifecycle and dependencies across modules.
 Coroutines: Utilized for asynchronous operations and managing background tasks.
-Turbine: Used for testing Kotlin flows, ensuring proper handling of asynchronous data streams.
 Coil: Image loading library used to display product images.
 Mockk: Mocking library for testing purposes.
 JUnit: Framework for writing and running tests.
