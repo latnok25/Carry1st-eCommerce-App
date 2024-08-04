@@ -33,7 +33,7 @@ Setup
 
 #Clone the Repository:
 
-git clone <repository-url>
+git clone git clone https://github.com/latnok25/Carry1st-eCommerce-App.git
 
 #Navigate to the Project Directory:
 
