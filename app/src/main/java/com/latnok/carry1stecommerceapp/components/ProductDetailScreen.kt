@@ -37,7 +37,7 @@ fun ProductDetailView(product: Product, viewModel: CartViewModel) {
             Button(onClick = {  val cartItem = CartItem(
                 id = product.id,
                 name = product.name,
-                quantity = product.quantity, // Default quantity can be set here
+                quantity = product.quantity,
                 price = product.price,
                 imageLocation = product.imageLocation,
                 currencyCode =  product.currencyCode,
